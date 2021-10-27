@@ -16,6 +16,7 @@ const Shorten = () => {
   const inputRef = useRef('')
   const { shortenLink, links } = useShrtCode()
   const [inputError, setInputError] = useState(false)
+  const [copiedIndex, setCopiedIndex] = useState()
   const handleClick = (e) => {
     e.preventDefault()
     const inputValue = inputRef.current.value
@@ -31,6 +32,12 @@ const Shorten = () => {
     if (inputError) {
       setInputError(false)
     }
+  }
+
+  const handleCopyLink = async (index) => {
+    const { short } = links[index]
+    await navigator.clipboard.writeText(short)
+    setCopiedIndex(index)
   }
 
   return (
@@ -58,7 +65,19 @@ const Shorten = () => {
                 <ShortenLinkTab key={index}>
                   <OriginalUrl>{link.original}</OriginalUrl>
                   <ShortUrl>{link.short}</ShortUrl>
-                  <Button minradius>Copy</Button>
+                  {copiedIndex !== index ? (
+                    <Button minradius onClick={() => handleCopyLink(index)}>
+                      Copy
+                    </Button>
+                  ) : (
+                    <Button
+                      minradius
+                      bgColor="var(--color-primary-dark-violet)"
+                      noHover
+                    >
+                      Copied!
+                    </Button>
+                  )}
                 </ShortenLinkTab>
               )
             })}

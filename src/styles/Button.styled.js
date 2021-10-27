@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const StyledButton = styled.button`
   border: none;
   border-radius: ${({ minradius }) => (minradius ? '10px' : '50px')};
-  background-color: var(--color-primary-cyan);
+  background-color: ${({ bgColor }) => bgColor || 'var(--color-primary-cyan)'};
   color: var(--color-white);
   font-weight: 700;
   font-size: ${({ size }) => size || `16px`};
@@ -12,7 +12,6 @@ export const StyledButton = styled.button`
   cursor: pointer;
   transition: background-color 0.2s;
 
-  &:hover {
-    background-color: var(--color-primary-cyan-light);
-  }
+  ${({ noHover }) =>
+    !noHover && '&:hover {background-color: var(--color-primary-cyan-light);}'}
 `
