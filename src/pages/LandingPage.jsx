@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from '../styles/Container.styled'
-import { Form, Input } from '../styles/Form.styled'
 import { Section } from '../styles/Section.styled'
 import { Card, CardGroup } from '../styles/Card.styled'
 import { Hero } from '../styles/Hero.styled'
@@ -8,8 +7,8 @@ import styled from 'styled-components'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
+import Shorten from '../components/Shorten'
 import heroImg from '../assets/img/illustration-working.svg'
-import shortenBG from '../assets/img/bg-shorten-desktop.svg'
 import brandRecognitionIcon from '../assets/img/icon-brand-recognition.svg'
 import DetailedRecordsIcon from '../assets/img/icon-detailed-records.svg'
 import FullyCustomizableIcon from '../assets/img/icon-fully-customizable.svg'
@@ -38,42 +37,6 @@ const BoostHeading = styled.h2`
   margin-bottom: 20px;
 `
 
-/* const StyledFacebookIcon = styled(FacebookIcon)`
-  fill: var(--color-white);
-  transition: fill 0.25s;
-
-  ${Link}:hover & {
-    fill: var(--color-primary-cyan);
-  }
-`
-
-const StyledTwitterIcon = styled(TwitterIcon)`
-  fill: var(--color-white);
-  transition: fill 0.25s;
-
-  ${Link}:hover & {
-    fill: var(--color-primary-cyan);
-  }
-`
-
-const StyledPinterestIcon = styled(PinterestIcon)`
-  fill: var(--color-white);
-  transition: fill 0.25s;
-
-  ${Link}:hover & {
-    fill: var(--color-primary-cyan);
-  }
-`
-
-const StyledInstagramIcon = styled(InstagramIcon)`
-  fill: var(--color-white);
-  transition: fill 0.25s;
-
-  ${Link}:hover & {
-    fill: var(--color-primary-cyan);
-  }
-` */
-
 const LandingPage = () => {
   return (
     <>
@@ -89,17 +52,10 @@ const LandingPage = () => {
           <img src={heroImg} alt="" />
         </Container>
       </Hero>
-      <Container>
-        <Form bgColor="var(--color-primary-dark-violet)" bgImage={shortenBG}>
-          <Input type="text" placeholder="Shorten a link here..." />
-          <Button size="20px" minradius>
-            Shorten It!
-          </Button>
-        </Form>
-      </Container>
+      <Shorten />
       <Section
         bgColor="var(--color-neutral-gray-light)"
-        padding="170px 0 140px"
+        padding="100px 0 140px"
       >
         <Container>
           <StatisticsHeading>Advanced Statistics</StatisticsHeading>
