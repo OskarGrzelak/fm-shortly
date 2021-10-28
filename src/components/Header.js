@@ -1,10 +1,22 @@
-import React from 'react'
-import { StyledHeader, Nav, Logo, Menu, NavLink } from '../styles/Header.styled'
+import React, { useState } from 'react'
+import {
+  StyledHeader,
+  Nav,
+  Logo,
+  Menu,
+  MenuButton,
+  NavLink,
+} from '../styles/Header.styled'
 import { Container } from '../styles/Container.styled'
 import Button from './Button'
 import { ReactComponent as ShortlyLogo } from '../assets/img/logo.svg'
+import { ReactComponent as MenuIcon } from '../assets/img/icon-menu.svg'
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
   return (
     <StyledHeader>
       <Container>
@@ -12,15 +24,16 @@ const Header = () => {
           <NavLink href="/">
             <Logo as={ShortlyLogo} />
           </NavLink>
-          <Menu>
+          <Menu open={menuOpen}>
             <NavLink href="#">Features</NavLink>
             <NavLink href="#">Pricing</NavLink>
             <NavLink href="#">Resources</NavLink>
+            <NavLink href="#" separated>
+              Login
+            </NavLink>
+            <Button full>Sign Up</Button>
           </Menu>
-          <Menu separated>
-            <NavLink href="#">Login</NavLink>
-            <Button>Sign Up</Button>
-          </Menu>
+          <MenuButton as={MenuIcon} onClick={toggleMenu} />
         </Nav>
       </Container>
     </StyledHeader>

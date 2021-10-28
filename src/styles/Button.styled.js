@@ -14,4 +14,8 @@ export const StyledButton = styled.button`
 
   ${({ noHover }) =>
     !noHover && '&:hover {background-color: var(--color-primary-cyan-light);}'}
+
+  @media (max-width: 768px) {
+    ${({ full }) => full && 'width: 100%;'}
+  }
 `

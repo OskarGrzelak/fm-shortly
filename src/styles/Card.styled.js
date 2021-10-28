@@ -5,6 +5,11 @@ export const CardGroup = styled.div`
   margin: 120px -20px 80px;
   position: relative;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin: 0;
+  }
+
   &::after {
     position: absolute;
     content: '';
@@ -13,9 +18,17 @@ export const CardGroup = styled.div`
     left: 20px;
     width: calc(100% - 40px);
     height: 10px;
-    transform: translateY(-50%);
+    transform: translate(0, -50%);
     background-color: var(--color-primary-cyan);
     z-index: 0;
+
+    @media (max-width: 768px) {
+      top: 40px;
+      left: 50%;
+      width: 6px;
+      height: calc(100% - 80px);
+      transform: translate(-50%, 0);
+    }
   }
 `
 
@@ -26,6 +39,12 @@ export const Card = styled.div`
   margin: 0 20px;
   z-index: 1;
   text-align: initial;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-top: 80px;
+    padding: 60px 20px 20px;
+  }
 
   & > span {
     border-radius: 100%;
@@ -38,12 +57,21 @@ export const Card = styled.div`
     position: absolute;
     top: -40px;
     left: 20px;
+
+    @media (max-width: 768px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   & > h3 {
     font-size: 20px;
     color: var(--color-neutral-dark-blue);
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   & > p {
@@ -52,9 +80,17 @@ export const Card = styled.div`
 
   &:first-child {
     transform: translateY(-40px);
+
+    @media (max-width: 768px) {
+      transform: translateY(0);
+    }
   }
 
   &:last-child {
     transform: translateY(40px);
+
+    @media (max-width: 768px) {
+      transform: translateY(0);
+    }
   }
 `

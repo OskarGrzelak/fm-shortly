@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     --color-primary-cyan: hsl(180, 66%, 49%);
     --color-primary-cyan-light: hsl(180, 66%, 75%);
     --color-primary-dark-violet: hsl(257, 27%, 26%);
+    --color-primary-light-violet: hsl(257, 27%, 40%);
 
     --color-secondary-red: hsl(0, 87%, 67%);
 
@@ -27,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     overflow-x: hidden;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 
   a {

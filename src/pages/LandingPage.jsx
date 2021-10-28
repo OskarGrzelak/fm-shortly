@@ -19,13 +19,13 @@ const LandingPage = () => {
       <Header />
       <Hero>
         <Container>
+          <img src={heroImg} alt="" />
           <h1>More than just shorter links</h1>
           <p>
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </p>
           <Button size="20px">Get Started</Button>
-          <img src={heroImg} alt="" />
         </Container>
       </Hero>
       <Shorten />

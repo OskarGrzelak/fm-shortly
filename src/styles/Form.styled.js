@@ -7,12 +7,22 @@ export const StyledForm = styled.form`
   ${({ bgImage }) => bgImage && `background-image: url(${bgImage});`}
   border-radius: 15px;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `
 
 export const InputGroup = styled.label`
   width: 100%;
   margin-right: 30px;
   position: relative;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 `
 
 export const Input = styled.input`
@@ -23,6 +33,10 @@ export const Input = styled.input`
   padding: 0.8em 1.5em;
   font-size: 20px;
   font-family: inherit;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 
   &::placeholder {
     color: var(--color-neutral-gray);
@@ -37,4 +51,8 @@ export const ErrorMsg = styled.em`
   font-size: 14px;
   color: var(--color-secondary-red);
   padding-top: 5px;
+
+  @media (max-width: 768px) {
+    position: static;
+  }
 `

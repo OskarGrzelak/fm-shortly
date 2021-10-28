@@ -33,7 +33,7 @@ const Shorten = () => {
                   <OriginalUrl>{link.original}</OriginalUrl>
                   <ShortUrl>{link.short}</ShortUrl>
                   {copiedIndex !== index ? (
-                    <Button bRadius="5px" onClick={() => handleCopyLink(index)}>
+                    <Button bRadius="5px" onClick={() => handleCopyLink(index)} full>
                       Copy
                     </Button>
                   ) : (
@@ -41,6 +41,7 @@ const Shorten = () => {
                       bRadius="5px"
                       bgColor="var(--color-primary-dark-violet)"
                       noHover
+                      full
                     >
                       Copied!
                     </Button>
