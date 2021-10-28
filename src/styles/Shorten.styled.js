@@ -22,6 +22,7 @@ export const ShortenLinkTab = styled.div`
 export const OriginalUrl = styled.div`
   margin-right: auto;
   color: var(--color-neutral-very-dark-blue);
+  overflow-wrap: anywhere;
 `
 
 export const ShortUrl = styled.div`

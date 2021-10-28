@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Hero = styled.div`
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
 
   h1 {
@@ -20,8 +20,11 @@ export const Hero = styled.div`
 
   img {
     position: absolute;
-    top: 0;
-    right: -100px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    max-width: 700px;
+    width: 65%;
     z-index: -1;
   }
 `

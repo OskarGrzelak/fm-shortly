@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledButton = styled.button`
   border: none;
-  border-radius: ${({ minradius }) => (minradius ? '10px' : '50px')};
+  border-radius: ${({ bRadius }) => bRadius || '50px'};
   background-color: ${({ bgColor }) => bgColor || 'var(--color-primary-cyan)'};
   color: var(--color-white);
   font-weight: 700;

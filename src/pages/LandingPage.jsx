@@ -1,9 +1,8 @@
 import React from 'react'
 import { Container } from '../styles/Container.styled'
-import { Section } from '../styles/Section.styled'
+import { Section, SectionHeading, SectionLead } from '../styles/Section.styled'
 import { Card, CardGroup } from '../styles/Card.styled'
 import { Hero } from '../styles/Hero.styled'
-import styled from 'styled-components'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
@@ -13,29 +12,6 @@ import brandRecognitionIcon from '../assets/img/icon-brand-recognition.svg'
 import DetailedRecordsIcon from '../assets/img/icon-detailed-records.svg'
 import FullyCustomizableIcon from '../assets/img/icon-fully-customizable.svg'
 import boostBG from '../assets/img/bg-boost-desktop.svg'
-
-const StatisticsHeading = styled.h2`
-  color: var(--color-neutral-dark-blue);
-  font-size: 40px;
-  line-height: 1.1;
-  text-align: center;
-  margin-bottom: 20px;
-`
-
-const StatisticsLead = styled.p`
-  color: var(--color-neutral-gray);
-  width: 45ch;
-  margin: 0 auto;
-  margin-bottom: 140px;
-  text-align: center;
-`
-
-const BoostHeading = styled.h2`
-  color: var(--color-white);
-  font-size: 40px;
-  line-height: 1.1;
-  margin-bottom: 20px;
-`
 
 const LandingPage = () => {
   return (
@@ -55,14 +31,15 @@ const LandingPage = () => {
       <Shorten />
       <Section
         bgColor="var(--color-neutral-gray-light)"
-        padding="100px 0 140px"
+        padding="100px 0"
+        textCenter
       >
         <Container>
-          <StatisticsHeading>Advanced Statistics</StatisticsHeading>
-          <StatisticsLead>
+          <SectionHeading>Advanced Statistics</SectionHeading>
+          <SectionLead>
             Track how your links are performing across the web with our advanced
             statistics dashboard.
-          </StatisticsLead>
+          </SectionLead>
           <CardGroup>
             <Card>
               <span>
@@ -104,7 +81,9 @@ const LandingPage = () => {
         bgImage={boostBG}
         textCenter
       >
-        <BoostHeading>Boost your links today</BoostHeading>
+        <SectionHeading color="var(--color-white)">
+          Boost your links today
+        </SectionHeading>
         <Button size="20px">Get Started</Button>
       </Section>
       <Footer />

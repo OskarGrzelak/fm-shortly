@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CardGroup = styled.div`
   display: flex;
-  margin: 0 -20px;
+  margin: 120px -20px 80px;
   position: relative;
 
   &::after {
@@ -25,6 +25,7 @@ export const Card = styled.div`
   position: relative;
   margin: 0 20px;
   z-index: 1;
+  text-align: initial;
 
   & > span {
     border-radius: 100%;

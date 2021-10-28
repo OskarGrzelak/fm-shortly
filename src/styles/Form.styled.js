@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Form = styled.form`
+export const StyledForm = styled.form`
   display: flex;
   padding: 40px 60px;
   background-color: ${({ bgColor }) => bgColor || 'var(--color-white)'};
@@ -19,7 +19,7 @@ export const Input = styled.input`
   width: 100%;
   border: ${({ error }) =>
     error ? '2px solid var(--color-secondary-red)' : '2px solid transparent'};
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0.8em 1.5em;
   font-size: 20px;
   font-family: inherit;

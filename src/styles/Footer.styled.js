@@ -7,6 +7,8 @@ export const StyledFooter = styled.footer`
 
 export const Logo = styled.svg`
   fill: var(--color-white);
+  display: block;
+  margin-right: 60px;
 `
 
 export const FooterMenu = styled.div`
@@ -15,11 +17,11 @@ export const FooterMenu = styled.div`
 
   ul {
     list-style: none;
-    margin-right: 80px;
+    margin-right: 60px;
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--color-white);
     margin-bottom: 15px;
   }

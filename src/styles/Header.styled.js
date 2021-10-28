@@ -6,6 +6,7 @@ export const StyledHeader = styled.header`
 
 export const Logo = styled.svg`
   fill: var(--color-neutral-dark-blue);
+  display: block;
 `
 
 export const Nav = styled.nav`
