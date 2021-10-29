@@ -37,7 +37,9 @@ export const ShortenLinkTab = styled.div`
 export const OriginalUrl = styled.div`
   margin-right: auto;
   color: var(--color-neutral-dark-blue);
-  overflow-wrap: anywhere;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   @media (max-width: 768px) {
     width: 100%;
